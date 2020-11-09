@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="WL" customModuleProvider="target">
+            <connections>
+                <outlet property="backButtonItem" destination="GTC-ls-OQa" id="3qi-dI-ibu"/>
+                <outlet property="errorImage" destination="EAP-4x-vEW" id="crQ-pH-Rat"/>
+                <outlet property="errorLabel" destination="UbH-pG-f58" id="uzD-hR-HVe"/>
+                <outlet property="infoNavbar" destination="av4-Rf-tT2" id="vXZ-tK-fJm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Cfa-uK-hGJ">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="575"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_data_image" translatesAutoresizingMaskIntoConstraints="NO" id="EAP-4x-vEW">
+                    <rect key="frame" x="117" y="117.5" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="99U-mz-g1Q"/>
+                        <constraint firstAttribute="width" constant="180" id="gy2-MI-VPo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection timed out. Please, try again later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbH-pG-f58">
+                    <rect key="frame" x="24" y="321.5" width="366" height="45"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                    <color key="textColor" red="0.95694512129999998" green="0.9607653022" blue="0.96078532930000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="av4-Rf-tT2">
+                    <rect key="frame" x="0.0" y="36" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem id="trM-8e-39S">
+                            <barButtonItem key="leftBarButtonItem" title="Item" image="back_arrow_icon" id="GTC-ls-OQa">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onBackButton:" destination="-1" id="aDZ-fH-d01"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="0.15355166789999999" green="0.1600677073" blue="0.1882395744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="UbH-pG-f58" firstAttribute="top" secondItem="EAP-4x-vEW" secondAttribute="bottom" constant="24" id="9CB-ee-umb"/>
+                <constraint firstItem="EAP-4x-vEW" firstAttribute="centerY" secondItem="Cfa-uK-hGJ" secondAttribute="centerY" constant="-80" id="M0P-TB-Y6l"/>
+                <constraint firstItem="812-8N-9cE" firstAttribute="trailing" secondItem="UbH-pG-f58" secondAttribute="trailing" constant="24" id="Sbb-fq-WaI"/>
+                <constraint firstItem="UbH-pG-f58" firstAttribute="leading" secondItem="812-8N-9cE" secondAttribute="leading" constant="24" id="VzT-K0-wZ9"/>
+                <constraint firstItem="EAP-4x-vEW" firstAttribute="centerX" secondItem="Cfa-uK-hGJ" secondAttribute="centerX" id="jCO-p7-plJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="812-8N-9cE"/>
+            <point key="canvasLocation" x="-66.666666666666671" y="-206.58482142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_arrow_icon" width="18" height="17"/>
+        <image name="error_data_image" width="180" height="180"/>
+    </resources>
+</document>
